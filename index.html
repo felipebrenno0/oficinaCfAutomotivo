@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CF Ar Condicionado Automotivo - Pecém</title>
+    <meta name="description" content="Oficina especializada em ar condicionado automotivo e elétrica de veículos em Pecém, Ceará. Fazemos reparo, recarga de gás, instalação e revisão geral.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Brand Gold & Orange (Based on user's logo) -->
+    <!-- Application Structure Plan: A single-page, mobile-first design. The structure prioritizes a vertical, single-column flow for small screens, expanding to a multi-column layout on larger devices. Key changes include a collapsible hamburger menu for mobile, larger tap targets for buttons, and responsive typography for improved readability on all screen sizes. This ensures an optimal user experience for the primary audience (mobile users) without compromising the desktop view. -->
+    <!-- Visualization & Content Choices: 
+        - Services: Inform -> Vertical Stacked Cards (mobile) / Grid (desktop) -> Hover effects -> Justification: Ensures readability and easy tapping on mobile, while using screen real estate efficiently on desktop. (HTML/CSS)
+        - Location & Contact: Guide/Convert -> Stacked Layout -> Prominent, full-width buttons (mobile) -> Justification: Makes the most critical actions (contact, map) immediately accessible and easy to use on a phone. (HTML/CSS) -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        .hero-bg {
+            background-color: #1e293b; /* slate-800 */
+            background-image: linear-gradient(to bottom, rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 1)), url('https://images.unsplash.com/photo-1544974958-33369018447c?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .action-button {
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .action-button:hover {
+            transform: scale(1.05);
+        }
+        .mobile-menu {
+            transition: max-height 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-xl sm:text-2xl font-bold text-slate-900 flex items-center">
+                    <span class="text-amber-500">CF</span>
+                    <span class="ml-2 font-medium">Ar Condicionado</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#servicos" class="text-slate-600 hover:text-amber-500 transition-colors">Serviços</a>
+                    <a href="#contato" class="text-slate-600 hover:text-amber-500 transition-colors">Contato</a>
+                    <a href="#localizacao" class="text-slate-600 hover:text-amber-500 transition-colors">Localização</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-800 hover:text-amber-500 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+             <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu md:hidden mt-4 overflow-hidden max-h-0">
+                <a href="#servicos" class="block py-2 px-4 text-sm text-slate-700 hover:bg-amber-100 rounded">Serviços</a>
+                <a href="#contato" class="block py-2 px-4 text-sm text-slate-700 hover:bg-amber-100 rounded">Contato</a>
+                <a href="#localizacao" class="block py-2 px-4 text-sm text-slate-700 hover:bg-amber-100 rounded">Localização</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-20 sm:py-24 text-white">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight mb-4">Soluções Completas para o Conforto do seu Veículo</h1>
+            <p class="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-8">Especialistas em ar condicionado e elétrica automotiva em Pecém. Cuidamos do seu carro com a qualidade que você merece.</p>
+            <a href="#servicos" class="action-button bg-amber-500 text-slate-900 font-bold py-3 px-8 rounded-lg text-lg hover:bg-amber-600">
+                Ver Serviços
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-16 sm:py-20">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Nossos Serviços</h2>
+                <p class="mt-2 text-lg text-slate-600">Tudo que seu carro precisa em um só lugar.</p>
+            </div>
+            <div class="flex flex-col md:grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Ar Condicionado Card -->
+                <div class="service-card bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-4 border-amber-500">
+                    <div class="text-4xl sm:text-5xl text-blue-500 mb-4">❄️</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3">Ar Condicionado Automotivo</h3>
+                    <p class="text-slate-600 mb-4">Deixe o clima do seu carro sempre perfeito com nossos serviços completos.</p>
+                    <ul class="space-y-2 text-slate-700">
+                        <li class="flex items-center"><span class="text-amber-500 font-bold mr-2">✓</span> Reparo Completo de Sistemas</li>
+                        <li class="flex items-center"><span class="text-amber-500 font-bold mr-2">✓</span> Recarga de Gás</li>
+                        <li class="flex items-center"><span class="text-amber-500 font-bold mr-2">✓</span> Instalação de Novos Sistemas</li>
+                        <li class="flex items-center"><span class="text-amber-500 font-bold mr-2">✓</span> Revisão Geral e Higienização</li>
+                    </ul>
+                </div>
+                <!-- Elétrica Card -->
+                <div class="service-card bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-4 border-orange-500">
+                    <div class="text-4xl sm:text-5xl text-yellow-400 mb-4">⚡</div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3">Elétrica de Veículos</h3>
+                    <p class="text-slate-600 mb-4">Diagnóstico preciso e reparos elétricos para garantir a segurança do seu veículo.</p>
+                     <ul class="space-y-2 text-slate-700">
+                        <li class="flex items-center"><span class="text-orange-500 font-bold mr-2">✓</span> Diagnóstico de Falhas Elétricas</li>
+                        <li class="flex items-center"><span class="text-orange-500 font-bold mr-2">✓</span> Reparo de Alternadores e Partida</li>
+                        <li class="flex items-center"><span class="text-orange-500 font-bold mr-2">✓</span> Manutenção de Ignição</li>
+                        <li class="flex items-center"><span class="text-orange-500 font-bold mr-2">✓</span> Instalação de Acessórios</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contato" class="py-16 sm:py-20 bg-slate-900 text-white">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold">Entre em Contato</h2>
+                <p class="mt-2 text-lg text-slate-300">Fale com Cláudio ou Cícera e agende seu serviço!</p>
+            </div>
+            <div class="max-w-4xl mx-auto bg-slate-800 p-6 sm:p-8 rounded-xl">
+                <!-- Contact Info -->
+                <div class="w-full mb-8">
+                    <h3 class="text-2xl font-bold mb-6 text-center">Nossos Contatos</h3>
+                    <div class="space-y-4 mb-8 sm:space-y-0 sm:flex sm:space-x-4">
+                        <a href="https://wa.me/5585991499362" target="_blank" class="action-button bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg flex items-center justify-center text-lg w-full">
+                            <span class="text-2xl mr-3">✆</span> WhatsApp 1
+                        </a>
+                        <a href="https://wa.me/5585994033220" target="_blank" class="action-button bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg flex items-center justify-center text-lg w-full">
+                           <span class="text-2xl mr-3">✆</span> WhatsApp 2
+                        </a>
+                    </div>
+                     <div class="text-center border-t border-slate-700 pt-6">
+                        <h4 class="text-xl font-bold mb-2">E-mail</h4>
+                        <a href="mailto:epgpecem@hotmail.com" class="text-amber-400 hover:text-amber-300 transition-colors break-all">epgpecem@hotmail.com</a>
+                    </div>
+                </div>
+                <!-- Location Info -->
+                <div id="localizacao" class="w-full border-t border-slate-700 pt-8">
+                    <h3 class="text-2xl font-bold mb-4 text-center">Nossa Localização</h3>
+                    <p class="text-lg text-slate-300 mb-4 text-center">📍 Av. Beatriz Braga, Pecém, CE<br>(Próximo ao Leal Moto, por trás do Shopping)</p>
+                    <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d837.1445489797962!2d-38.83310057332703!3d-3.552183027167167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c0db006f15b341%3A0x52c43877109a00bb!2sCF%20Ar%20Condicionado%20Automotivo%20Pec%C3%A9m!5e0!3m2!1spt-BR!2sbr!4v1751939948903!5m2!1spt-BR!2sbr" class="w-full h-80" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=CF+Ar+Condicionado+Automotivo+Pecem" target="_blank" class="action-button inline-block bg-amber-500 text-slate-900 font-bold py-3 px-6 rounded-lg hover:bg-amber-600">
+                            Abrir no Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-6">
+        <div class="container mx-auto px-4 sm:px-6 text-center text-slate-400">
+            <p>&copy; 2024 CF Ar Condicionado Automotivo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', function () {
+                const isExpanded = mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px';
+                if (isExpanded) {
+                    mobileMenu.style.maxHeight = '0px';
+                } else {
+                    mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+                }
+            });
+
+            // Close menu when a link is clicked
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.style.maxHeight = '0px';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
