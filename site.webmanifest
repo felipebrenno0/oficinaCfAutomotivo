@@ -1,0 +1,22 @@
+{
+    "name": "CF Ar Condicionado Automotivo - Pecém",
+    "short_name": "CF Automotivo",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#1f2937",
+    "theme_color": "#dc2626",
+    "description": "Oficina especializada em ar condicionado automotivo e elétrica de veículos em Pecém, Ceará.",
+    "icons": [
+      {
+        "src": "/favicon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/favicon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
